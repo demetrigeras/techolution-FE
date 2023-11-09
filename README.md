@@ -1,70 +1,39 @@
-# Getting Started with Create React App
+# To-Do List Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is the front-end repository for a To-Do List application where users can create, view, edit, and delete tasks.
 
-## Available Scripts
+## Prerequisites
 
-In the project directory, you can run:
+Before running this project, make sure the backend service is up and running. Follow the instructions in the backend repository's `README.md` to get the server started.
 
-### `npm start`
+## Getting Started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+To get the front-end running locally:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Clone this repo
+- `npm install i` to install all required dependencies
+- `npm run start` to start the local server (this project uses create-react-app)
 
-### `npm test`
+The application should now be running on [http://localhost:3000](http://localhost:3000).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Application Structure
 
-### `npm run build`
+- `Home.jsx`: The home page of the application. It displays a welcome message and a list of tasks. It also includes a button to navigate to the To-Do List page where you can manage tasks.
+- `Tasks.jsx`: This page allows you to create new tasks and manage existing ones. You can edit task names or delete tasks as needed.
+- `App.css`: The CSS file for basic styling of the application.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Navigation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The application includes a navigation bar at the top that allows you to return to the home page at any time. On the home page, there is a button labeled "To-do Page" which takes you to the page for task management.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Task Management
 
-### `npm run eject`
+On the To-Do List page, you can:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **Create a Task**: Enter a task name in the input field and click the "Create Task" button.
+- **Edit a Task**: Click the "Edit" button next to any task to change its name. After editing, click away from the input field to save the changes automatically.
+- **Delete a Task**: Click the "Delete" button next to any task to remove it from the list.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Backend Integration
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The front-end application interacts with the backend through a set of API services defined in `services/task.js`. Make sure the backend URL configured in the services matches the running backend server's URL.
