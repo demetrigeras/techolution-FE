@@ -67,17 +67,18 @@ function Tasks({ tasks, setTasks, setTask, task }) {
 
   return (
     <div className="TodoList">
-      To-Do List Page
+     <div className="topage"> To-Do List Page</div>
       <form onSubmit={handleSubmit}>
-        <input
+        <input className="inputtask"
           placeholder="Enter your task name"
           name="taskName"
           value={task.taskName}
           onChange={handleChange}
         />
-        <button type="submit">Create Task</button>
+        <button className="addbutton create" type="submit">Create Task</button>
       </form>
       <h1 className="underlined">TO-DO LIST</h1>
+      <div className="taskName">
       {tasks.map((task) => (
         <li key={task._id}>
           {editingId === task._id ? (
@@ -88,15 +89,19 @@ function Tasks({ tasks, setTasks, setTask, task }) {
               onBlur={() => handleUpdate(task._id)} // Save on blur
               autoFocus
             />
+            
           ) : (
             <span>{task.taskName}</span>
+            
           )}
-          <button onClick={() => handleEdit(task._id, task.taskName)}>
+          
+          <button className="addbutton edit-button" onClick={() => handleEdit(task._id, task.taskName)}>
             Edit
           </button>
-          <button onClick={() => handleDelete(task._id)}>Delete</button>
+          <button className="addbutton delete-button" onClick={() => handleDelete(task._id)}>Delete</button>
         </li>
       ))}
+    </div>
     </div>
   );
 }

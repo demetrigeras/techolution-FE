@@ -24,7 +24,11 @@
 }
 
 .taskName{
-  font-size:20px
+  font-size:20px;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: center;
 }
 
 
@@ -32,7 +36,7 @@
   /* display: flex;
   flex-direction: column;
   align-items: center; */
-  padding: 10px 10px;
+  padding: 7px 10px;
   font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
   border-radius: 8px;
   border: none;
@@ -44,8 +48,28 @@
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+  margin-left: 20px;
 }
+.edit-button{
+ margin-left:20px ;
+}
+
+.delete-button{
+margin-left: 20px;
+}
+
 
 .TodoList{
   font-size: 20px;
+  margin-top: 20px;
+}
+
+.topage{
+  margin-top: 50px;
+  font-size: 50px;
+}
+
+.inputtask{
+  margin-top: 20px;
+  font-size: 18px;
 }
