@@ -12,7 +12,7 @@ export const getTasks = async () => {
 
 export const getTask = async (id) => {
   try {
-    const response = await api.get(`/task/${id}`);
+    const response = await api.get(`/tasks/${id}`);
     return response.data;
   } catch (error) {
     console.error(`Failed to get cat - error: ${error}`);
@@ -22,7 +22,7 @@ export const getTask = async (id) => {
 
 export const createTask = async (TaskData) => {
   try {
-    const response = await api.post("/task", catData);
+    const response = await api.post("/tasks", TaskData);
     return response.data;
   } catch (error) {
     throw error;
@@ -31,7 +31,7 @@ export const createTask = async (TaskData) => {
 
 export const updateTask = async (id, catData) => {
   try {
-    const response = await api.put(`/task/${id}`, catData);
+    const response = await api.put(`/tasks/${id}`, catData);
     return response.data;
   } catch (error) {
     throw error;
@@ -40,7 +40,7 @@ export const updateTask = async (id, catData) => {
 
 export const deleteTask = async (id) => {
   try {
-    const response = await api.delete(`/task/${id}`);
+    const response = await api.delete(`/tasks/${id}`);
     return response.data;
   } catch (error) {
     throw error;
