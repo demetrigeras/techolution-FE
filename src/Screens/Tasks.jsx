@@ -22,6 +22,7 @@ function Tasks({ tasks, setTasks, setTask, task }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (task.taskName && task.taskName.length > 0) {
     try {
       await createTask(task);
       setTask({ taskName: "" });
@@ -29,8 +30,8 @@ function Tasks({ tasks, setTasks, setTask, task }) {
     } catch (error) {
       console.error("Error creating task:", error);
     }
-  };
-
+}
+  }
   const handleChange = (e) => {
     const { name, value } = e.target;
 
